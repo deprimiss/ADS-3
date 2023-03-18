@@ -11,9 +11,9 @@ int cbinsearch(int *arr, int size, int value) {
         } else if (value > *(arr + sr)) {
             l = sr + 1;
         } else {
-            for (int i = 1; *(arr + sr) == *(arr + (sr - 1)); i++)
+            for (int i = 1; *(arr + sr) == *(arr + (sr - i)); i++)
                 count++;
-            for (int i = 0; *(arr + sr) == *(arr + (sr + 1)); i++)
+            for (int i = 0; *(arr + sr) == *(arr + (sr + i)); i++)
                 count++;
             return count;
         }
